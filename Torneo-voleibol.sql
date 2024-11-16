@@ -45,3 +45,50 @@ db.arbitros.insertMany([
   { "nombre": "Sofía Moreno", "documento": "200300400", "experiencia": "7 años", "disponibilidad": ["2024-11-21", "2024-11-23"] },
   { "nombre": "Jorge Rojas", "documento": "300400500", "experiencia": "3 años", "disponibilidad": ["2024-11-22", "2024-11-24"] }
 ]);
+
+
+//======================> Crear colección para Encuentros <======================//
+
+db.encuentros.insertMany([
+  {
+    "equipo_local": "Tiburones",
+    "equipo_visitante": "Águilas",
+    "fecha": "2024-11-20",
+    "hora": "10:00",
+    "lugar": "Coliseo Central",
+    "arbitro": "Alberto Castro"
+  },
+  {
+    "equipo_local": "Leones",
+    "equipo_visitante": "Tiburones",
+    "fecha": "2024-11-21",
+    "hora": "14:00",
+    "lugar": "Coliseo Norte",
+    "arbitro": "Sofía Moreno"
+  }
+]);
+
+//======================> Crear colección para Resultados <======================//
+
+db.resultados.insertMany([
+  {
+    "encuentro_id": ObjectId("64bf1df2f1cda00012585bc1"), // ID del primer encuentro
+    "set_local": [25, 23, 25],
+    "set_visitante": [15, 25, 20],
+    "ganador": "Tiburones"
+  },
+  {
+    "encuentro_id": ObjectId("64bf1df2f1cda00012585bc2"), // ID del segundo encuentro
+    "set_local": [15, 23, 20],
+    "set_visitante": [25, 25, 25],
+    "ganador": "Águilas"
+  }
+]);
+
+//======================> Crear colección para Tabla de Posiciones <======================//
+
+db.tabla_posiciones.insertMany([
+  { "equipo_id": "Tiburones", "partidos_jugados": 2, "victorias": 1, "derrotas": 1, "puntos": 3 },
+  { "equipo_id": "Águilas", "partidos_jugados": 2, "victorias": 2, "derrotas": 0, "puntos": 6 },
+  { "equipo_id": "Leones", "partidos_jugados": 1, "victorias": 0, "derrotas": 1, "puntos": 0 }
+]);
