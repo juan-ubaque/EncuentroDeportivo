@@ -92,3 +92,14 @@ db.tabla_posiciones.insertMany([
   { "equipo_id": "Águilas", "partidos_jugados": 2, "victorias": 2, "derrotas": 0, "puntos": 6 },
   { "equipo_id": "Leones", "partidos_jugados": 1, "victorias": 0, "derrotas": 1, "puntos": 0 }
 ]);
+
+
+//======================> Consultas <======================//
+// consultas de las colecciones
+db.equipos.find(); 
+
+db.tabla_posiciones.find();
+
+db.tabla_posiciones.find();
+
+
