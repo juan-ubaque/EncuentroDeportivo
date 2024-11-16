@@ -72,13 +72,13 @@ db.encuentros.insertMany([
 
 db.resultados.insertMany([
   {
-    "encuentro_id": ObjectId("64bf1df2f1cda00012585bc1"), // ID del primer encuentro
+    "encuentro_id": ObjectId("6739092976ecfa71e839bfeb"), // ID del primer encuentro
     "set_local": [25, 23, 25],
     "set_visitante": [15, 25, 20],
     "ganador": "Tiburones"
   },
   {
-    "encuentro_id": ObjectId("64bf1df2f1cda00012585bc2"), // ID del segundo encuentro
+    "encuentro_id": ObjectId("6739092976ecfa71e839bfec"), // ID del segundo encuentro
     "set_local": [15, 23, 20],
     "set_visitante": [25, 25, 25],
     "ganador": "Águilas"
