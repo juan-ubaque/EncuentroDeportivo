@@ -9,7 +9,11 @@ db.equipos.insertMany([
     },
     "jugadores": [
       { "nombre": "Juan García", "documento": "123456001", "fecha_nacimiento": "1995-03-15", "posicion": "Líbero" },
-      { "nombre": "Luis López", "documento": "123456002", "fecha_nacimiento": "1996-04-20", "posicion": "Atacante" }
+      { "nombre": "Luis López", "documento": "123456002", "fecha_nacimiento": "1996-04-20", "posicion": "Atacante" },
+      { "nombre": "Juan David", "documento": "1111193418", "fecha_nacimiento": "1993-12-24", "posicion": "Atacante" },
+      { "nombre": "Pedro Martínez", "documento": "123456007", "fecha_nacimiento": "1994-11-12", "posicion": "Central" },
+      { "nombre": "Mario Torres", "documento": "123456008", "fecha_nacimiento": "1995-08-08", "posicion": "Opuesto" },
+      { "nombre": "José Díaz", "documento": "123456009", "fecha_nacimiento": "1997-02-14", "posicion": "Armador" }
     ]
   },
   {
@@ -21,7 +25,11 @@ db.equipos.insertMany([
     },
     "jugadores": [
       { "nombre": "Ana Torres", "documento": "123456003", "fecha_nacimiento": "1997-05-10", "posicion": "Central" },
-      { "nombre": "Laura Díaz", "documento": "123456004", "fecha_nacimiento": "1998-06-25", "posicion": "Armadora" }
+      { "nombre": "Laura Díaz", "documento": "123456004", "fecha_nacimiento": "1998-06-25", "posicion": "Armadora" },
+      { "nombre": "Sofía García", "documento": "123456010", "fecha_nacimiento": "1999-07-14", "posicion": "Líbero" },
+      { "nombre": "Camila Ramírez", "documento": "123456011", "fecha_nacimiento": "1996-12-03", "posicion": "Opuesto" },
+      { "nombre": "Isabela Gómez", "documento": "123456012", "fecha_nacimiento": "1995-04-21", "posicion": "Atacante" },
+      { "nombre": "Valentina Pérez", "documento": "123456013", "fecha_nacimiento": "1996-09-18", "posicion": "Armadora" }
     ]
   },
   {
@@ -33,7 +41,11 @@ db.equipos.insertMany([
     },
     "jugadores": [
       { "nombre": "Carlos Ortega", "documento": "123456005", "fecha_nacimiento": "1999-01-30", "posicion": "Opuesto" },
-      { "nombre": "Miguel Ruiz", "documento": "123456006", "fecha_nacimiento": "2000-02-15", "posicion": "Líbero" }
+      { "nombre": "Miguel Ruiz", "documento": "123456006", "fecha_nacimiento": "2000-02-15", "posicion": "Líbero" },
+      { "nombre": "Andrés Torres", "documento": "123456014", "fecha_nacimiento": "1998-06-20", "posicion": "Central" },
+      { "nombre": "Fernando Gómez", "documento": "123456015", "fecha_nacimiento": "1997-09-11", "posicion": "Opuesto" },
+      { "nombre": "Santiago Martínez", "documento": "123456016", "fecha_nacimiento": "1996-03-05", "posicion": "Armador" },
+      { "nombre": "Jorge Ramírez", "documento": "123456017", "fecha_nacimiento": "1994-12-01", "posicion": "Atacante" }
     ]
   }
 ]);
