@@ -102,4 +102,63 @@ db.tabla_posiciones.find();
 
 db.tabla_posiciones.find();
 
+// Consulta para obtener todos los jugadores de cada equipo
+db.equipos.find(
+  {},
+  {
+    nombre: 1,
+    "jugadores.nombre": 1,
+    "jugadores.documento": 1,
+    "jugadores.posicion": 1
+  }
+);
+
+
+// Consulta que se usa para obtener la tabla de posiciones ordenada por puntos (de mayor a menor):
+db.tabla_posiciones.find().sort({ puntos: -1 });
+
+//Consulta para obtener los resultados en los que participó un equipo específico (por ejemplo, "Tiburones"):
+db.resultados.aggregate([
+  {
+    $lookup: {
+      from: "encuentros",
+      localField: "encuentro_id",
+      foreignField: "_id",
+      as: "detalle_encuentro"
+    }
+  },
+  {
+    $match: {
+      $or: [
+        { "detalle_encuentro.equipo_local": "Tiburones" },
+        { "detalle_encuentro.equipo_visitante": "Tiburones" }
+      ]
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      encuentro_id: 1,
+      "detalle_encuentro.fecha": 1,
+      "detalle_encuentro.equipo_local": 1,
+      "detalle_encuentro.equipo_visitante": 1,
+      set_local: 1,
+      set_visitante: 1,
+      ganador: 1
+    }
+  }
+]);
+
+// Consulta para obtener todos los encuentros arbitrados por un árbitro específico (por ejemplo, "Alberto Castro"):
+db.encuentros.find(
+  { arbitro: "Alberto Castro" },
+  {
+    _id: 0,
+    fecha: 1,
+    hora: 1,
+    lugar: 1,
+    equipo_local: 1,
+    equipo_visitante: 1
+  }
+);
 
